@@ -56,7 +56,7 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: Build and test
-        run: mvn install
+        run: mvn -V --no-transfer-progress install
 
   checkstyle_protobuf:
     name: Run checkstyle and generate protobufs
